@@ -1,0 +1,17 @@
+C:\Users\Arif\source\repos\MvcCamp\DataAccess\bin\Debug\DataAccess.dll.config
+C:\Users\Arif\source\repos\MvcCamp\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\Arif\source\repos\MvcCamp\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\Arif\source\repos\MvcCamp\DataAccess\bin\Debug\Entities.dll
+C:\Users\Arif\source\repos\MvcCamp\DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\Arif\source\repos\MvcCamp\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Arif\source\repos\MvcCamp\DataAccess\bin\Debug\Entities.pdb
+C:\Users\Arif\source\repos\MvcCamp\DataAccess\bin\Debug\Entities.dll.config
+C:\Users\Arif\source\repos\MvcCamp\DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\Arif\source\repos\MvcCamp\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Arif\source\repos\MvcCamp\DataAccess\obj\Debug\DataAccess.csproj.AssemblyReference.cache
+C:\Users\Arif\source\repos\MvcCamp\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Arif\source\repos\MvcCamp\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+C:\Users\Arif\source\repos\MvcCamp\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\Arif\source\repos\MvcCamp\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\Arif\source\repos\MvcCamp\DataAccess\obj\Debug\DataAccess.Migrations.mig1.resources
+C:\Users\Arif\source\repos\MvcCamp\DataAccess\obj\Debug\DataAccess.csproj.GenerateResource.cache
