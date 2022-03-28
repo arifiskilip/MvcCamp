@@ -1,4 +1,5 @@
-﻿using Entities.Concrete;
+﻿using DataAccess.Abstract;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.Repositories
 {
-    public class ContentDal : RepositoryDal<Content, DictionaryContext>
+    public class ContentDal : RepositoryDal<Content, DictionaryContext>,IContentDal
     {
     }
 }

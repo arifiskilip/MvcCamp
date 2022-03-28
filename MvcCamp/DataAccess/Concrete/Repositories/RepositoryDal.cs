@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.Repositories
 {
-    public class RepositoryDal<TEntity, TContext> : IRepositoryDal<TEntity> where TEntity:class, new()
+    public class RepositoryDal<TEntity, TContext> : IRepositoryDal<TEntity> 
+        where TEntity:class, new()
         where TContext : DbContext, new()
     {
         public void Add(TEntity entity)

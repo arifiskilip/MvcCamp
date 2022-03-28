@@ -1,4 +1,5 @@
-﻿using Entities.Concrete;
+﻿using DataAccess.Concrete;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,5 +10,9 @@ namespace DataAccess.Abstract
 {
     public interface IHeadingDal : IRepositoryDal<Heading>
     {
+        int HowMonyCategoriesOfSoftware();
+
+        string CategoryNameWithMostTitles();
+      
     }
 }
