@@ -40,5 +40,10 @@ namespace Business.Concrete
         {
             _contentDal.Update(entity);
         }
+
+        public List<Content> GetListById(int id)
+        {
+            return  _contentDal.GetAll(c => c.HeadingId == id);
+        }
     }
 }

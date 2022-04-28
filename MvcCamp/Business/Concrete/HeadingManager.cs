@@ -1,6 +1,7 @@
 ﻿using Business.Abstract;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,9 +22,9 @@ namespace Business.Concrete
             _headingDal.Add(entity);
         }
 
-        public void Delete(Heading entity)
+        public void Delete(Heading entity) //statu control
         {
-            _headingDal.Delete(entity);
+            _headingDal.Update(entity);
         }
 
         public Heading GetById(int id)
@@ -49,6 +50,16 @@ namespace Business.Concrete
         public string CategoryNameWithMostTitles()
         {
             return _headingDal.CategoryNameWithMostTitles();
+        }
+
+        public List<HeadingDetailDto> HeadingDetails()
+        {
+            return _headingDal.HeadingDetails();
+        }
+
+        public List<Heading> GetAllHeadingStatus(bool statu)
+        {
+            return _headingDal.GetAll(h=> h.Statu== statu);
         }
     }
 }

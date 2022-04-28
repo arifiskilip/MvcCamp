@@ -9,46 +9,66 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-
 namespace MvcCamp.Controllers
 {
     public class CategoryController : Controller
     {
         CategoryManager categoryManager = new CategoryManager(new CategoryDal());
         CategoryValidator categoryValidator = new CategoryValidator();
-        ValidationResult result =new ValidationResult();
-
-        // GET: Category
+        ValidationResult resultValidator = new ValidationResult();
+        // GET: Admin
+        [Authorize(Roles="A")]
         public ActionResult Index()
-        {
-            return View();
-        }
-
-        public ActionResult GetAll()
         {
             return View(categoryManager.GetAll());
         }
-
         [HttpGet]
         public ActionResult Add()
         {
             return View();
         }
-
-        [HttpPost]
+        [HttpPost, Authorize]
         public ActionResult Add(Category category)
         {
-            result = categoryValidator.Validate(category);
-            if (!result.IsValid)
+            resultValidator = categoryValidator.Validate(category);
+            if (!resultValidator.IsValid)
             {
-                foreach (var item in result.Errors)
+                foreach (var item in resultValidator.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);                   
+                }
+                return View();
+            }
+            categoryManager.Add(category);
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Delete(Category category)
+        {
+            categoryManager.Delete(category);
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public ActionResult Update(int id)
+        {          
+            return View(categoryManager.GetById(id));
+        }
+
+        [HttpPost]
+        public ActionResult Update(Category category)
+        {
+            resultValidator = categoryValidator.Validate(category);
+            if (!resultValidator.IsValid)
+            {
+                foreach (var item in resultValidator.Errors)
                 {
                     ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
                 }
                 return View();
             }
-            categoryManager.Add(category);
-            return RedirectToAction("GetAll");
+            categoryManager.Update(category);
+            return RedirectToAction("Index");
         }
     }
 }

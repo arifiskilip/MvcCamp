@@ -15,11 +15,13 @@ namespace Entities.Concrete
         public string Name { get; set; }
         public DateTime Date { get; set; }
         public int CategoryId { get; set; }
-        // public string Writer { get; set; }
+        public int WriterId { get; set; }
+        public bool Statu { get; set; }
 
 
 
         public virtual Category Category { get; set; }
+        public virtual Writer Writer { get; set; }
 
         public ICollection<Content> Contents { get; set; }
     }

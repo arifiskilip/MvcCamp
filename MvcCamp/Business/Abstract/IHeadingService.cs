@@ -1,4 +1,5 @@
 ﻿using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,5 +12,7 @@ namespace Business.Abstract
     {
         int HowMonyCategoriesOfSoftware();
         string CategoryNameWithMostTitles();
+        List<HeadingDetailDto> HeadingDetails();
+        List<Heading> GetAllHeadingStatus(bool statu);
     }
 }

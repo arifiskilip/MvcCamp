@@ -1,41 +1,37 @@
-﻿
+﻿@using Entities.Concrete
+@model List<Category>
+
 @{
-    Layout = null;
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-    <div class="container">
-        <h2>Tablo</h2>
-        <table class="table table-bordered">
-            <thead>
+<div class="container">
+    <h2>Kategoriler</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Kategori İsmi</th>
+                <th>Açıklama</th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
                 <tr>
-                    <th>Id</th>
-                    <th>Kategori İsmi</th>
-                    <th>Açıklama</th>
-                    <th>Aktiflik Durumu</th>
+                    <th>@item.Id</th>
+                    <td>@item.Name</td>
+                    <td>@item.Description</td>
+                    <td><a href="/Category/Delete/@item.Id" class="btn btn-danger">Sil</a></td>
+                    <td><a href="/Category/Update/@item.Id" class="btn btn-warning">Güncelle</a></td>
+                    <td><a href="#" class="btn btn-primary">Başlıklar</a></td>
                 </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Eğitim</td>
-                    <td>Eğitim Kategorisi</td>
-                    <td>Aktif</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Yazılım</td>
-                    <td>Yazılım Kategorisi</td>
-                    <td>Aktif</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Sinema</td>
-                    <td>Sinema Kategorisi</td>
-                    <td>Pasif</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-
+            }
+        </tbody>
+    </table>
+</div>
+<a href="/Category/Add" class="btn btn-success">Kategori Ekle</a>

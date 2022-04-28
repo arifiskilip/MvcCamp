@@ -3,6 +3,7 @@ using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,5 +41,16 @@ namespace Business.Concrete
         {
             _contactDal.Update(entity);
         }
+
+        public List<Contact> GetListReadMessage()
+        {
+            return _contactDal.GetAll(p => p.State == false);
+        }
+
+        public List<Contact> GetListUnreadMessage()
+        {
+            return _contactDal.GetAll(p => p.State == true);
+        }
+
     }
 }

@@ -9,5 +9,6 @@ namespace Business.Abstract
 {
     public interface IContentService : IRepositoryService<Content>
     {
+        List<Content> GetListById(int id);
     }
 }

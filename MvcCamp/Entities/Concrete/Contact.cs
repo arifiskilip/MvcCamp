@@ -18,6 +18,8 @@ namespace Entities.Concrete
         [StringLength(50)]
         public string Subject { get; set; } //konu
         public string Message { get; set; }
+        public DateTime ContactDate { get; set; }
+        public bool State { get; set; }
 
     }
 }

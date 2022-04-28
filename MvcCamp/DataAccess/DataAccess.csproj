@@ -56,7 +56,11 @@
     <Compile Include="Abstract\IContactDal.cs" />
     <Compile Include="Abstract\IContentDal.cs" />
     <Compile Include="Abstract\IHeadingDal.cs" />
+    <Compile Include="Abstract\IImageDal.cs" />
+    <Compile Include="Abstract\ILoginDal.cs" />
+    <Compile Include="Abstract\IMessageDal.cs" />
     <Compile Include="Abstract\IRepositoryDal.cs" />
+    <Compile Include="Abstract\IRolDal.cs" />
     <Compile Include="Abstract\IWriterDal.cs" />
     <Compile Include="Concrete\DictionaryContext.cs" />
     <Compile Include="Concrete\Repositories\AboutDal.cs" />
@@ -64,11 +68,67 @@
     <Compile Include="Concrete\Repositories\ContactDal.cs" />
     <Compile Include="Concrete\Repositories\ContentDal.cs" />
     <Compile Include="Concrete\Repositories\HeadingDal.cs" />
+    <Compile Include="Concrete\Repositories\ImageDal.cs" />
+    <Compile Include="Concrete\Repositories\LoginDal.cs" />
+    <Compile Include="Concrete\Repositories\MessageDal.cs" />
     <Compile Include="Concrete\Repositories\RepositoryDal.cs" />
+    <Compile Include="Concrete\Repositories\RolDal.cs" />
     <Compile Include="Concrete\Repositories\WriterDal.cs" />
     <Compile Include="Migrations\202203261755121_mig1.cs" />
     <Compile Include="Migrations\202203261755121_mig1.designer.cs">
       <DependentUpon>202203261755121_mig1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202203281953056_mig2.cs" />
+    <Compile Include="Migrations\202203281953056_mig2.designer.cs">
+      <DependentUpon>202203281953056_mig2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202203290913531_mig3.cs" />
+    <Compile Include="Migrations\202203290913531_mig3.designer.cs">
+      <DependentUpon>202203290913531_mig3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202203291118346_mig4.cs" />
+    <Compile Include="Migrations\202203291118346_mig4.designer.cs">
+      <DependentUpon>202203291118346_mig4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202203311649338_mig5.cs" />
+    <Compile Include="Migrations\202203311649338_mig5.designer.cs">
+      <DependentUpon>202203311649338_mig5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204041331395_mig6.cs" />
+    <Compile Include="Migrations\202204041331395_mig6.designer.cs">
+      <DependentUpon>202204041331395_mig6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204041337599_mig7.cs" />
+    <Compile Include="Migrations\202204041337599_mig7.designer.cs">
+      <DependentUpon>202204041337599_mig7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204221014529_AddMessageClass.cs" />
+    <Compile Include="Migrations\202204221014529_AddMessageClass.designer.cs">
+      <DependentUpon>202204221014529_AddMessageClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204221546593_mig8.cs" />
+    <Compile Include="Migrations\202204221546593_mig8.designer.cs">
+      <DependentUpon>202204221546593_mig8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204221627430_mig9.cs" />
+    <Compile Include="Migrations\202204221627430_mig9.designer.cs">
+      <DependentUpon>202204221627430_mig9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204241206414_NewAdmin_Table.cs" />
+    <Compile Include="Migrations\202204241206414_NewAdmin_Table.designer.cs">
+      <DependentUpon>202204241206414_NewAdmin_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204241830025_ContactStateAdd.cs" />
+    <Compile Include="Migrations\202204241830025_ContactStateAdd.designer.cs">
+      <DependentUpon>202204241830025_ContactStateAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204261057389_AbaoutStatuAdd.cs" />
+    <Compile Include="Migrations\202204261057389_AbaoutStatuAdd.designer.cs">
+      <DependentUpon>202204261057389_AbaoutStatuAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204261227440_mig10.cs" />
+    <Compile Include="Migrations\202204261227440_mig10.designer.cs">
+      <DependentUpon>202204261227440_mig10.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -86,6 +146,45 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202203261755121_mig1.resx">
       <DependentUpon>202203261755121_mig1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203281953056_mig2.resx">
+      <DependentUpon>202203281953056_mig2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203290913531_mig3.resx">
+      <DependentUpon>202203290913531_mig3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203291118346_mig4.resx">
+      <DependentUpon>202203291118346_mig4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203311649338_mig5.resx">
+      <DependentUpon>202203311649338_mig5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204041331395_mig6.resx">
+      <DependentUpon>202204041331395_mig6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204041337599_mig7.resx">
+      <DependentUpon>202204041337599_mig7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204221014529_AddMessageClass.resx">
+      <DependentUpon>202204221014529_AddMessageClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204221546593_mig8.resx">
+      <DependentUpon>202204221546593_mig8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204221627430_mig9.resx">
+      <DependentUpon>202204221627430_mig9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204241206414_NewAdmin_Table.resx">
+      <DependentUpon>202204241206414_NewAdmin_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204241830025_ContactStateAdd.resx">
+      <DependentUpon>202204241830025_ContactStateAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204261057389_AbaoutStatuAdd.resx">
+      <DependentUpon>202204261057389_AbaoutStatuAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204261227440_mig10.resx">
+      <DependentUpon>202204261227440_mig10.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

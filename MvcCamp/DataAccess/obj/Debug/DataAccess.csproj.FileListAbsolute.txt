@@ -15,3 +15,16 @@ C:\Users\Arif\source\repos\MvcCamp\DataAccess\obj\Debug\DataAccess.dll
 C:\Users\Arif\source\repos\MvcCamp\DataAccess\obj\Debug\DataAccess.pdb
 C:\Users\Arif\source\repos\MvcCamp\DataAccess\obj\Debug\DataAccess.Migrations.mig1.resources
 C:\Users\Arif\source\repos\MvcCamp\DataAccess\obj\Debug\DataAccess.csproj.GenerateResource.cache
+C:\Users\Arif\source\repos\MvcCamp\DataAccess\obj\Debug\DataAccess.Migrations.mig2.resources
+C:\Users\Arif\source\repos\MvcCamp\DataAccess\obj\Debug\DataAccess.Migrations.mig3.resources
+C:\Users\Arif\source\repos\MvcCamp\DataAccess\obj\Debug\DataAccess.Migrations.mig4.resources
+C:\Users\Arif\source\repos\MvcCamp\DataAccess\obj\Debug\DataAccess.Migrations.mig5.resources
+C:\Users\Arif\source\repos\MvcCamp\DataAccess\obj\Debug\DataAccess.Migrations.mig6.resources
+C:\Users\Arif\source\repos\MvcCamp\DataAccess\obj\Debug\DataAccess.Migrations.mig7.resources
+C:\Users\Arif\source\repos\MvcCamp\DataAccess\obj\Debug\DataAccess.Migrations.AddMessageClass.resources
+C:\Users\Arif\source\repos\MvcCamp\DataAccess\obj\Debug\DataAccess.Migrations.mig8.resources
+C:\Users\Arif\source\repos\MvcCamp\DataAccess\obj\Debug\DataAccess.Migrations.mig9.resources
+C:\Users\Arif\source\repos\MvcCamp\DataAccess\obj\Debug\DataAccess.Migrations.NewAdmin_Table.resources
+C:\Users\Arif\source\repos\MvcCamp\DataAccess\obj\Debug\DataAccess.Migrations.ContactStateAdd.resources
+C:\Users\Arif\source\repos\MvcCamp\DataAccess\obj\Debug\DataAccess.Migrations.AbaoutStatuAdd.resources
+C:\Users\Arif\source\repos\MvcCamp\DataAccess\obj\Debug\DataAccess.Migrations.mig10.resources

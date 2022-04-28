@@ -9,5 +9,7 @@ namespace Business.Abstract
 {
     public interface IContactService : IRepositoryService<Contact>
     {
+        List<Contact> GetListReadMessage();
+        List<Contact> GetListUnreadMessage();
     }
 }

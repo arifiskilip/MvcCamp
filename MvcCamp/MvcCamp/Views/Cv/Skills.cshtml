@@ -1,0 +1,36 @@
+﻿@using Entities.Concrete
+@model List<CvSkill>
+@{
+    Layout = null;
+}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<div class="container">
+    <h2>Kategoriler</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Kategori İsmi</th>
+                <th>Açıklama</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th>@item.Id</th>
+                    <td>@item.SkillName</td>
+                    <td>@item.SkillPoint</td>
+                    <td><a href="/Cv/SkillDelete/@item.Id" class="btn btn-danger">Sil</a></td>
+                    <td><a href="/Cv/SkillUpdate/@item.Id" class="btn btn-warning">Güncelle</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a href="/Cv/SkillAdd" class="btn btn-success">Yetenek Ekle</a>
+    <a href="/Cv/EditProfile" class="btn btn-danger bi bi-arrow-left">Geri Gel</a>
+</div>

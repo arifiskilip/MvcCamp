@@ -19,5 +19,6 @@ namespace Entities.Concrete
         public string Image1 { get; set; }
         [StringLength(100)]
         public string Image2 { get; set; }
+        public bool Statu { get; set; }
     }
 }

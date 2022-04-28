@@ -1,37 +1,24 @@
 ﻿@model Entities.Concrete.Category
-
 @{
-    Layout = null;
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-
-<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
 
 @using (Html.BeginForm("Add", "Category", FormMethod.Post))
 {
     <div class="container">
         <div class="form-group">
-            @Html.Label("Kategori İsmi")
+            @Html.Label("Kategori Adı")
             @Html.TextBoxFor(c => c.Name, new { @class = "form-control" })
-            @Html.ValidationMessageFor(x => x.Name)
-            <br /><br />
-            @Html.Label("Açıklama Alanı")
-            @Html.TextBoxFor(c => c.Description, new { @class = "form-control" })
-            @Html.ValidationMessageFor(x => x.Description)
-            <br /><br />
-            <button class="btn btn-warning">Ekle</button>
+            @Html.ValidationMessageFor(c => c.Name, "", new { @style = "color: red;" })
+            <br />
+            @Html.Label("Kategori Açıklaması")
+            @Html.TextAreaFor(c => c.Description, new { @class = "form-control" })
+            @Html.ValidationMessageFor(c => c.Description, "", new { @style = "color: red;" })
+            <br />
+            <button class="btn btn-success">Kategori Ekle</button>
         </div>
     </div>
-
 }
 
-@*<form class="form-group" method="post">
-        <div>
-            <h3>Kategori Ekle</h3>
-            <br />
-            <input type="text" name="Name"  class="form-control" placeholder="Kategori Adı"/>
-            <br />
-            <input type="text" name="Description"  class="form-control" placeholder="Kategori Açıklaması"/>
-            <br />
-            <button class="btn btn-info">Ekle</button>
-        </div>
-    </form>*@
+
