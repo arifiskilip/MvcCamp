@@ -1,0 +1,28 @@
+﻿@model Entities.Concrete.Category
+
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("Update", "Category", FormMethod.Post))
+{
+    <div class="container">
+        <div class="form-group">
+            @Html.Label("Id")
+            @Html.TextBoxFor(c=> c.Id, new {@class="form-control" ,@readonly=true })
+            <br />
+            @Html.Label("Kategori Adı")
+            @Html.TextBoxFor(c => c.Name, new { @class = "form-control" })
+            @Html.ValidationMessageFor(c => c.Name, "", new { @style = "color: red;" })
+            <br />
+            @Html.Label("Kategori Açıklaması")
+            @Html.TextAreaFor(c => c.Description, new { @class = "form-control" })
+            @Html.ValidationMessageFor(c => c.Description, "", new { @style = "color: red;" })
+            <br />
+            <button class="btn btn-success">Kategori Güncelle</button>
+        </div>
+    </div>
+}
+
+

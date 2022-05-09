@@ -1,0 +1,36 @@
+﻿@model Entities.Concrete.Writer
+
+@{
+    ViewBag.Title = "WriterEdit";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
+}
+
+@using (Html.BeginForm("WriterEdit", "WriterPanel", FormMethod.Post))
+{
+    <div class="container">
+        <div class="form-group">
+            @Html.Label("Id")
+            @Html.TextBoxFor(c => c.Id, new { @class = "form-control", @readonly = true })
+            <br />
+            @Html.Label("Adı")
+            @Html.TextBoxFor(c => c.FirstName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(c => c.FirstName, "", new { @style = "color: red;" })
+            <br />
+            @Html.Label("Soyadı")
+            @Html.TextBoxFor(c => c.LastName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(c => c.LastName, "", new { @style = "color: red;" })
+            <br />
+            @Html.Label("Unvanı")
+            @Html.TextBoxFor(c => c.Title, new { @class = "form-control" })
+            @Html.ValidationMessageFor(c => c.Title, "", new { @style = "color: red;" })
+            <br />
+            @Html.Label("Açıklaması")
+            @Html.TextAreaFor(c => c.About, new { @class = "form-control" })
+            @Html.ValidationMessageFor(c => c.About, "", new { @style = "color: red;" })
+            <br />
+            <button class="btn btn-success">Güncelle</button>
+        </div>
+    </div>
+}
+
+

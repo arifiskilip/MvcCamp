@@ -1,0 +1,61 @@
+﻿@using Entities.Concrete
+@model List<Admin>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <h2>Yetkilendirme</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Mail</th>
+                <th>Yetki</th>
+                <th>Durum</th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.UserName</td>
+                <td>@item.Role</td>
+                <td>
+                    @switch (@item.Statu)
+                    {
+                        case true:<span class="badge badge-success">Aktif</span>break;
+                        case false:<span class="badge badge-danger">Pasif</span>break;
+                    }
+                </td>
+                <td>
+                    <a class="btn btn-success" href="/Authorization/StatuActive/@item.Id">
+                        <i class="fas fa-pencil-alt">
+                        </i>
+                        Aktif Yap
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-danger" href="/Authorization/StatuPassive/@item.Id">
+                        <i class="fas fa-pencil-alt">
+                        </i>
+                        Pasif Yap
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-primary" href="/Login/EditAdmin/@item.Id">
+                        <i class="fas fa-pencil-alt">
+                        </i>
+                        Düzenle
+                    </a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>

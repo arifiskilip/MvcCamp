@@ -1,0 +1,42 @@
+﻿@model Entities.Concrete.Heading
+@{
+    ViewBag.Title = "EditHeading";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
+}
+
+@using (Html.BeginForm("EditHeading", "WriterPanel", FormMethod.Post))
+{
+    <div class="container">
+        <div class="form-group">
+            @Html.Label("Başlık Id")
+            @Html.TextBoxFor(c => c.Id, new { @class = "form-control", @style = "ReadOnly=false" })
+            <br />
+            @Html.Label("Başlık Adı")
+            @Html.TextBoxFor(c => c.Name, new { @class = "form-control" })
+            @Html.ValidationMessageFor(c => c.Name, "", new { @style = "color: red;" })
+            <br />
+            @Html.Label("Kategori Adı")
+            @Html.DropDownListFor(c => c.CategoryId, (List<SelectListItem>)ViewBag.valueHeading,
+            new { @class = "form-control" })
+            @Html.ValidationMessageFor(c => c.CategoryId, "", new { @style = "color: red;" })
+            <br />
+            <br />
+            @Html.Label("Tarih")
+            @Html.TextBoxFor(c => c.Date, new { @class = "form-control" })
+            @Html.ValidationMessageFor(c => c.Date, "", new { @style = "color: red;" })
+            <br />
+            <br />
+            @Html.Label("Yazar")
+            @Html.TextBoxFor(c => c.WriterId, new { @class = "form-control" })
+            @Html.ValidationMessageFor(c => c.WriterId, "", new { @style = "color: red;" })
+            <br />
+            <br />
+            @Html.Label("Durum")
+            @Html.TextBoxFor(c => c.Statu, new { @class = "form-control" })
+            @Html.ValidationMessageFor(c => c.Statu, "", new { @style = "color: red;" })
+            <br />
+            <button class="btn btn-success">Başlık Güncelle</button>
+        </div>
+    </div>
+}
+

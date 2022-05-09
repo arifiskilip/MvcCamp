@@ -1,0 +1,70 @@
+﻿@model MvcCamp.Controllers.StatisticsController
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@*<div class="container">
+    <h2>İstatistik</h2>
+    <table class="table table-bordered">
+        <thead>
+
+        </thead>
+        <tbody>
+            <tr>
+            </tr>
+        </tbody>
+    </table>
+</div>*@
+
+<html>
+<head>
+    <style>
+        .stil {
+            color: white;
+                margin: 10px;
+                margin-right:40px;
+                margin-top:20px;
+                margin-bottom:10px;
+                margin-left:30px;
+                padding: 50px;
+                text-align:center;
+           /* margin:auto;
+            padding:80px;*/
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-3 stil" style="background-color: #005D8E">
+                <h3> @ViewBag.numberOfCategories</h3>
+                <h5>Kategori Sayısı</h5>
+            </div>
+
+            <div class="col-3 stil" style="background-color: #1CE882">
+                <h3> @ViewBag.howMonyCategoriesOfSoftware</h3>
+                <h5> "Yazılım" kategorisine ait başlık sayısı</h5>
+            </div>
+            <div class="col-3 stil" style="background-color: #00A7FF">
+                <h3> @ViewBag.nameStartingWithA</h3>
+                <h5>Adı "A" ile başlayan yazarlar</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 stil" style="background-color: #F5D41E">
+                <h3> @ViewBag.categoryNameWithMostTitles</h3>
+                <h5>En fazla başlığa sahip kategori adı</h5>
+            </div>
+            <div class="col-3 stil" style="background-color: #8D9CF4">
+                <h3> @ViewBag.differenceBetweenStatus</h3>
+                <p>Kategori tablosunda durumu true olan ile false olan kategoriler arasındaki fark</p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

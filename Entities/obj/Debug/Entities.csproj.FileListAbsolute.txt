@@ -1,0 +1,12 @@
+C:\Users\Arif\source\repos\MvcCamp\Entities\bin\Debug\Entities.dll.config
+C:\Users\Arif\source\repos\MvcCamp\Entities\bin\Debug\Entities.dll
+C:\Users\Arif\source\repos\MvcCamp\Entities\bin\Debug\Entities.pdb
+C:\Users\Arif\source\repos\MvcCamp\Entities\bin\Debug\EntityFramework.dll
+C:\Users\Arif\source\repos\MvcCamp\Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Arif\source\repos\MvcCamp\Entities\bin\Debug\EntityFramework.xml
+C:\Users\Arif\source\repos\MvcCamp\Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Arif\source\repos\MvcCamp\Entities\obj\Debug\Entities.csproj.AssemblyReference.cache
+C:\Users\Arif\source\repos\MvcCamp\Entities\obj\Debug\Entities.csproj.CoreCompileInputs.cache
+C:\Users\Arif\source\repos\MvcCamp\Entities\obj\Debug\Entities.csproj.CopyComplete
+C:\Users\Arif\source\repos\MvcCamp\Entities\obj\Debug\Entities.dll
+C:\Users\Arif\source\repos\MvcCamp\Entities\obj\Debug\Entities.pdb

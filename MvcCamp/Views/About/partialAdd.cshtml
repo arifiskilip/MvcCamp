@@ -1,0 +1,33 @@
+﻿<button class="btn btn-success" data-toggle="modal" data-target="#Modal1">
+    Pop-Up pencerem
+</button>
+
+<div class="modal" id="Modal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="container">
+                <div class="modal-header">
+                    <h2 class="modal-title">Hakkımızda Metin Girisi</h2>
+                </div>
+                <form action="/About/Add" method="post">
+                    <div class="modal-body">
+                        <label>Hakkımda 1:</label>
+                        <input type="text" name="Detail1" class="form-control" />
+                        <br />
+                        <label>Hakkımda 2:</label>
+                        <input type="text" name="Detail2" class="form-control" />
+                        <br />
+                        <label>Görsel 1:</label>
+                        <input type="text" name="Image1" class="form-control" />
+                        <br />
+                        <label>Görsel 1:</label>
+                        <input type="text" name="Image2" class="form-control" />
+                        <br />
+                        <button class="btn btn-info">Kaydet</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

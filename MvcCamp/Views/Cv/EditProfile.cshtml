@@ -1,0 +1,32 @@
+﻿@model Entities.Concrete.CvUserInfo
+@{
+    Layout = null;
+}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+@using (Html.BeginForm("EditProfile", "Cv", FormMethod.Post))
+{
+    <div class="container">
+        <div class="form-group">
+            @Html.Label("İsim")
+            @Html.TextBoxFor(c => c.Firstname, new { @class = "form-control" })
+            <br />
+            @Html.Label("Soyisim")
+            @Html.TextBoxFor(c => c.Lastname, new { @class = "form-control" })
+            <br />
+            @Html.Label("Yaş")
+            @Html.TextBoxFor(c => c.Age, new { @class = "form-control" })
+            <br />
+            @Html.Label("Okul")
+            @Html.TextBoxFor(c => c.School, new { @class = "form-control" })
+            <br />
+            @Html.Label("Bölüm")
+            @Html.TextBoxFor(c => c.Department, new { @class = "form-control" })
+            <br />
+            <button class="btn btn-success">Güncelle</button>
+            <a href="/Cv/Skills" class="btn btn-primary">YETENEKLER</a>
+            <a href="/Cv/Index" class="btn btn-danger">Geri Dön</a>
+
+        </div>
+    </div>
+}

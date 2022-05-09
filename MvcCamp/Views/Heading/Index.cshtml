@@ -1,0 +1,136 @@
+﻿@using Entities.Concrete
+@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList<Heading>
+
+@{
+    string styleClass = "";
+
+}
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+}
+<link href="~/Content/PagedList.css" rel="stylesheet" />
+<!DOCTYPE html>
+<html>
+<body class="hold-transition sidebar-mini">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Başlıklar</h1>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+        <!-- Default box -->
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Yazarlar</h3>
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Remove">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-body p-0">
+                <table class="table table-striped projects">
+                    <thead>
+                        <tr>
+                            <th style="width: 1%">
+                                #
+                            </th>
+                            <th style="width: 30%">
+                                Başlık Adı
+                            </th>
+                            <th style="width: 15%">
+                                Yazarı
+                            </th>
+                            <th style="width: 15%">
+                                Durum
+                            </th>
+                            <th style="width: 8%" class="text-center">
+                                Kategorisi
+                            </th>
+                            <th style="width: 30%">
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @item.Id
+                                </td>
+                                <td>
+                                    <a>
+                                        @item.Name
+                                    </a>
+                                    <br />
+                                    <small>
+                                        @item.Date.ToString("dd-MMM-yyyy")
+                                    </small>
+                                </td>
+                                <td>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <img alt="Avatar" class="table-avatar" src="~/AdminLTE-3.0.4/dist/img/@item.Writer.WriterImage">
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <div>
+                                        @switch (@item.Statu)
+                                        {
+                                            case true:<span class="badge badge-success">Aktif</span>break;
+                                            case false:<span class="badge badge-danger">Pasif</span>break;
+                                        }
+                                    </div>
+                                </td>
+                                <td class="project-state">
+                                    <span class="badge badge-warning">@item.Category.Name</span>
+                                </td>
+                                <td class="project-actions text-right">
+                                    <a class="btn btn-primary btn-sm" href="/Content/ContentByHeading/@item.Id">
+                                        <i class="fas fa-folder">
+                                        </i>
+                                        Başlığa Git
+                                    </a>
+                                    <a class="btn btn-info btn-sm" href="/Heading/Update/@item.Id">
+                                        <i class="fas fa-pencil-alt">
+                                        </i>
+                                        Düzenle
+                                    </a>
+                                    <a class="btn btn-danger btn-sm" href="/Heading/Delete/@item.Id">
+                                        <i class="fas fa-trash">
+                                        </i>
+                                        Sil
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+
+    </section>
+</body>
+</html>
+<a href="/Heading/Add" class="btn btn-success">Başlık Ekle</a>
+
+@Html.PagedListPager((IPagedList)Model,p=> Url.Action("Index", new { p }))
+
